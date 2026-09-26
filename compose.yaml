@@ -1,0 +1,13 @@
+name: downloader-myversion-front
+services:
+  frontend:
+    build: .
+    restart: unless-stopped
+    environment:
+      PORT: 3001
+      BACKEND_URL: http://host.docker.internal:8085
+      WEB_API_TOKEN: ${WEB_API_TOKEN}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "${FRONTEND_PORT:-3001}:3001"

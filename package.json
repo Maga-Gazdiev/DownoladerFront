@@ -1,0 +1,17 @@
+{
+  "name": "video-downloader-front",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check public/app.js && prettier --check server.js public package.json",
+    "format": "prettier --write server.js public package.json"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2"
+  }
+}
