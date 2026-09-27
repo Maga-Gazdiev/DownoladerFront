@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     environment:
       PORT: 3001
-      BACKEND_URL: http://host.docker.internal:8085
+      BACKEND_URL: ${BACKEND_URL:?Set BACKEND_URL in .env}
       WEB_API_TOKEN: ${WEB_API_TOKEN}
     extra_hosts:
       - "host.docker.internal:host-gateway"

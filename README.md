@@ -7,9 +7,9 @@ make init
 make up
 ```
 
-Интерфейс: http://localhost:3001. Backend в Docker: http://host.docker.internal:8085.
+Интерфейс: http://localhost:3001. Адрес backend задаётся через BACKEND_URL в .env; сейчас это https://downoladerback-1.onrender.com/.
 
-Для локальной разработки укажите BACKEND_URL=http://127.0.0.1:8085 в .env:
+Для локальной разработки можно заменить BACKEND_URL в .env на http://127.0.0.1:8085:
 ```sh
 make install
 make run
