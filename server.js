@@ -59,9 +59,9 @@ async function proxy(req, res) {
       "cache-control": "no-store",
       "x-content-type-options": "nosniff",
     };
+    // fetch decompresses responses, so the upstream content-length may be stale.
     for (const name of [
       "content-type",
-      "content-length",
       "content-disposition",
       "accept-ranges",
       "content-range",
